@@ -26,9 +26,19 @@ module mux(
     input sel,
     output out
     );
-    wire out;
+    //SOLUTION WITH WIRE/ASSIGN, with delay
+    //wire out;
+    //assign #(5,5) out = sel?b:a;
     
-    assign #(5,5) out = sel?b:a;
+    //SOLUTION WITH REG/IF STATEMENT, doesn't work with delay yet.
+    reg out;
+    always@(*)
+    begin 
+    if(sel)
+	out = b;
+    else
+	out = a;
+    end
               
       
 endmodule
