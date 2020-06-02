@@ -24,8 +24,6 @@ module electronic_dice(
     input clk,
 	output reg [2:0] throw );
 
-    //registers and wires
-
 	//logic
 	always@(posedge clk) begin
 		if(throw == 3'b000 || throw == 3'b111 || throw == 3'b110|| rst) begin

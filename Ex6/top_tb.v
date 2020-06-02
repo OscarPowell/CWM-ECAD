@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Test bench for Exercise #6 - Dice or Traffic Lights?
-// Student Name:
-// Date: 
+// Student Name: Oscar Powell
+// Date: 02/06/2020
 //
 // Description: A testbench module to test Ex6 - Dice or Traffic Lights?
 // You need to write the whole file
