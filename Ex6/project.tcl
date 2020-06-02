@@ -23,6 +23,7 @@ create_fileset -constrset -quiet constraints
 #Todo: add verilog modules here
 read_verilog "dice_top.v"
 read_verilog "lights_top.v"
+read_verilog "multiplexer_top.v"
 read_verilog "top.v"
 read_verilog "top_tb.v"
 

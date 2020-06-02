@@ -28,17 +28,48 @@ module dice_lights_multiplexer(
 	);
 	
 	//Registers/wires
-	reg [2:0] result;
+	wire [2:0] result;
+	wire red;
+	wire amber;
+	wire green;
+	wire [2:0] throw;
 
-	//Logic
-	always@(posedge clk) begin
-		//case(
-	end
+	//Logic using Ex2 Multiplexer
+
+	//Logic using my own multiplexer
+	//always@(posedge clk) begin
+	//	case(sel) //if 1, output is lights, if 2 it is dice.
+	//		1'b1: begin
+	//			result = {red,amber,green};
+	//		end
+	//		1'b0: begin
+	//			result = throw;
+	//		end
+	//	endcase
+	//end
 
 	//Instance of traffic lights
-	traffic_lights lights(.clk (clk) );
+	traffic_lights lights(
+		.clk (clk),
+		.red (red),
+		.amber (amber),
+		.green (green) );
 
 	//Instance of dice
-	electronic_dice dice(.button (button), .clk (clk), .rst (rst));
+	electronic_dice dice(
+		.button (button), 
+		.clk (clk), 	
+		.rst (rst),
+		.throw (throw[2:0]) );
+	
+	//Instance of multiplexer
+	mux multiplexer(
+    	.a (throw [2:0]),
+    	.b ({red,amber,green}),
+    	.sel (sel),
+     	.out (result [2:0])
+     	);
+
+	
 endmodule	
 
