@@ -33,7 +33,7 @@ module counter(
     //first try and get it to work just with direction moving forward
     assign counter_out = counter;
 	  
-    always@(posedge clk or posedge rst)
+    always@(posedge clk)
 	counter <= rst?0: //if rst true then it resets
 		enable?(direction?(counter+1):(counter-1) //if enable true it checks direction
                         ):counter;			  //otherwise no change

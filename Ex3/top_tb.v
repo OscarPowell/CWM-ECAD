@@ -18,7 +18,7 @@ module top_tb(
     parameter TEST_PERIOD = 600; //in terms of time period, how long will the counter run for
 				//(goes up and down back to zero)
 
-//Todo: Regitsers and wires
+//Todo: Registers and wires
     reg clk;
     reg rst;
     reg direction;
@@ -54,17 +54,18 @@ module top_tb(
     initial
     begin
     	#TEST_PERIOD 
-	if(counter_out != 0) //checks it gets back to zero, otherwise error
-	begin
-	    err = 1;
-	end
+		if(counter_out != 0) //checks it gets back to zero, otherwise error
+		begin
+	    	err = 1;
+		end
+		
 	//Run success/failure check
-	if(err==1) begin	
-	    $display("***TEST FAILED! final_counter_value ==%d,***",counter_out);
-	end
-	else begin
-	    $display("***TEST SUCCESS!***");
-	end
+		if(err==1) begin	
+	    	$display("***TEST FAILED! final_counter_value ==%d,***",counter_out);
+		end
+		else begin
+	    	$display("***TEST SUCCESS!***");
+		end
 
     	$finish;
     end
