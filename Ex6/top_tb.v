@@ -1,11 +1,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Test bench for Exercise #6 - Dice or Traffic Lights?
+<<<<<<< HEAD
 // Student Name: Oscar Powell
 // Date: 02/06/2020
+=======
+// Student Name:
+// Date: 
+>>>>>>> upstream/master
 //
 // Description: A testbench module to test Ex6 - Dice or Traffic Lights?
 // You need to write the whole file
 //////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 module top_tb(
 	);
 	//Parameters
@@ -63,3 +69,6 @@ module top_tb(
 		.sel (sel),
 		.result (result[2:0]) );
 endmodule
+=======
+
+>>>>>>> upstream/master
