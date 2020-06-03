@@ -34,7 +34,17 @@ module top_tb(
 		sel = 0;
 		rst = 1;
 		#10 rst = 1'b0; //sets back to zero
-		
+		#30
+		if(result != 3'b100) begin //by 4 iterations, should equal 4 on the dice
+			err = 1;
+			$display("***TEST FAILED, should equal 4 on the counter after 4 iterations ***");
+		end
+		sel = 1;	//switches to lights
+		#20
+		if(result != 3'b110) begin //waits 2 more iterations, should equal 110 on the lights
+			err = 1;
+			$display("***TEST FAILED, should be red and amber (110) in the lights after switching ***");
+		end
 	end	
 
 	//Finish test, check for success

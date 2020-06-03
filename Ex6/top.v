@@ -34,19 +34,6 @@ module dice_lights_multiplexer(
 	wire green;
 	wire [2:0] throw;
 
-	//Logic using Ex2 Multiplexer
-
-	//Logic using my own multiplexer
-	//always@(posedge clk) begin
-	//	case(sel) //if 1, output is lights, if 2 it is dice.
-	//		1'b1: begin
-	//			result = {red,amber,green};
-	//		end
-	//		1'b0: begin
-	//			result = throw;
-	//		end
-	//	endcase
-	//end
 
 	//Instance of traffic lights
 	traffic_lights lights(
