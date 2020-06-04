@@ -1,12 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Exercise #6 
-<<<<<<< HEAD
 // Student Name: Oscar Powell
 // Date: 02/06/2020
-=======
-// Student Name:
-// Date: 
->>>>>>> upstream/master
 //
 //
 //  Description: In this exercise, you need to design a multiplexer between a dice and traffic 
@@ -24,7 +19,6 @@
 //           result[2:0]
 //
 //////////////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
 module dice_lights_multiplexer(
 	input rst,
 	input clk,
@@ -65,6 +59,4 @@ module dice_lights_multiplexer(
 
 	
 endmodule	
-=======
->>>>>>> upstream/master
 

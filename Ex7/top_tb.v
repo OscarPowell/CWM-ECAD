@@ -6,4 +6,7 @@
 // Description: A testbench module to test Ex7 - Times Table
 // You need to write the whole file
 //////////////////////////////////////////////////////////////////////////////////
+module top_tb(  );
 
+
+endmodule
