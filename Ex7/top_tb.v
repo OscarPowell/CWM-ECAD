@@ -31,12 +31,37 @@ module top_tb(  );
 	initial begin
 		err <= 0;
 		enable <= 1;
-		a = 3'b001;
-		b = 3'b001;
-		#5
-		if(result != 2'd49) begin
-			$display("***TEST FAILED! Answer was %b, should be 49 ***",result);
+		a = 3'd6;
+		b = 3'd6;
+		#20
+		if(result != 6'd36) begin
+			$display("***TEST FAILED! For %d and %d, answer was %d, should be 36***",a,b,result);
 			err = 1;
+		end 
+		else begin 
+			$display("**For %d and %d, Result was %d,**",a,b,result);
+		end
+
+		a = 3'd3;
+		b = 3'd7;
+		#20
+		if(result != 6'd21) begin
+			$display("***TEST FAILED! For %d and %d, answer was %d, should be 36***",a,b,result);
+			err = 1;
+		end 
+		else begin 
+			$display("**For %d and %d, Result was %d,**",a,b,result);
+		end
+
+		a = 3'd6;
+		b = 3'd0;
+		#20
+		if(result != 6'd0) begin
+			$display("***TEST FAILED! For %d and %d, answer was %d, should be 36***",a,b,result);
+			err = 1;
+		end 
+		else begin 
+			$display("**For %d and %d, Result was %d,**",a,b,result);
 		end
 	end	
 
